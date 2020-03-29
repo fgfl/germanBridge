@@ -1,16 +1,13 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
+
 import Card from '../components/Card';
 
-export default {
-  title: 'Card',
-  component: Card,
-};
-
-export const cardData = {
+const cardData = {
   number: 2,
   suit: 'clubs',
 };
 
-export const twoClubs = () => {
-  return <Card cardData={cardData}></Card>;
-};
+storiesOf('Card', module).add('2 clubs', () => (
+  <Card cardData={cardData}></Card>
+));
