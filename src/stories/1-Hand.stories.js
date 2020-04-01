@@ -2,25 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Hand from '../components/Hand';
-
-const generateHand = (numberOfCards) => {
-  const suits = {
-    1: 'spades',
-    2: 'hearts',
-    3: 'clubs',
-    4: 'diamonds',
-  };
-  const hand = [];
-
-  for (let i = 0; i < numberOfCards; i++) {
-    hand[i] = {
-      number: Math.ceil(Math.random() * 13),
-      suit: suits[Math.ceil(Math.random() * 4)],
-    };
-  }
-
-  return hand;
-};
+import generateHand from '../helper/generateHand';
 
 storiesOf('Hand', module)
   .add('1 card', () => <Hand cards={generateHand(1)}></Hand>)
