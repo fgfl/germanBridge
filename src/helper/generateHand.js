@@ -1,3 +1,4 @@
+// This function is for testing purpose only. It can generate duplicate cards
 const generateHand = (numberOfCards) => {
   const suits = {
     1: 'spades',

@@ -10,19 +10,19 @@ export default function Hand({ cards }) {
   const spades = cards
     .filter((card) => card.suit === 'spades')
     .sort(sortLargestFirst)
-    .map((card) => <Card cardData={card}></Card>);
+    .map((card, index) => <Card key={index} cardData={card}></Card>);
   const hearts = cards
     .filter((card) => card.suit === 'hearts')
     .sort(sortLargestFirst)
-    .map((card) => <Card cardData={card}></Card>);
+    .map((card, index) => <Card key={index} cardData={card}></Card>);
   const clubs = cards
     .filter((card) => card.suit === 'clubs')
     .sort(sortLargestFirst)
-    .map((card) => <Card cardData={card}></Card>);
+    .map((card, index) => <Card key={index} cardData={card}></Card>);
   const diamonds = cards
     .filter((card) => card.suit === 'diamonds')
     .sort(sortLargestFirst)
-    .map((card) => <Card cardData={card}></Card>);
+    .map((card, index) => <Card key={index} cardData={card}></Card>);
 
   return (
     <Fragment>
