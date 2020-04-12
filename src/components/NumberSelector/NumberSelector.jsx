@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from 'react';
 
+import './NumberSelector.scss';
+
 import TriangleButton from '../TriangleButton/TriangleButton';
 
 export default function NumberSelector({ min, max }) {
@@ -14,7 +16,7 @@ export default function NumberSelector({ min, max }) {
   };
 
   return (
-    <Fragment>
+    <div className={'number-selector'}>
       <TriangleButton
         down
         disabled={number === min}
@@ -26,6 +28,6 @@ export default function NumberSelector({ min, max }) {
         disabled={number === max}
         onClick={incrementNumber}
       ></TriangleButton>
-    </Fragment>
+    </div>
   );
 }
