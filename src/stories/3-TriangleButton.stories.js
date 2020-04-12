@@ -6,15 +6,11 @@ import { action } from '@storybook/addon-actions';
 import TriangleButton from '../components/TriangleButton/TriangleButton';
 
 storiesOf('TriangleButton', module)
-  .add('Up', () => (
+  .add('Up', () => <TriangleButton up></TriangleButton>)
+  .add('Down', () => <TriangleButton down></TriangleButton>)
+  .add('Left', () => <TriangleButton left></TriangleButton>)
+  .add('Right', () => <TriangleButton right></TriangleButton>)
+  .add('Clickable', () => (
     <TriangleButton up onClick={action('button-clicked')}></TriangleButton>
   ))
-  .add('Down', () => (
-    <TriangleButton down onClick={action('button-clicked')}></TriangleButton>
-  ))
-  .add('Left', () => (
-    <TriangleButton left onClick={action('button-clicked')}></TriangleButton>
-  ))
-  .add('Right', () => (
-    <TriangleButton right onClick={action('button-clicked')}></TriangleButton>
-  ));
+  .add('Disabled', () => <TriangleButton up disabled></TriangleButton>);
