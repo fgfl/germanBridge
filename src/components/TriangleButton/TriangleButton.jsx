@@ -18,7 +18,20 @@ export default function TriangleButton({
     'triangle-left': left,
     'triangle-right': right,
   });
+
+  const getAriaLabelText = (up, down, left, right) => {
+    if (up) return 'upButton';
+    if (down) return 'downButton';
+    if (left) return 'leftButton';
+    if (right) return 'rightButton';
+  };
+
   return (
-    <button className={btnClass} disabled={disabled} onClick={onClick}></button>
+    <button
+      aria-label={getAriaLabelText(up, down, left, right)}
+      className={btnClass}
+      disabled={disabled}
+      onClick={onClick}
+    ></button>
   );
 }
