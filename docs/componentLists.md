@@ -1,7 +1,7 @@
 - [ ] Bid chooser
 
-  - up and down arrows
-  - rectangle with number of bids
+  - [x] up and down arrows
+  - [x] rectangle with number of bids
 
 - [ ] Bid number shower
 - [ ] stack number shower
