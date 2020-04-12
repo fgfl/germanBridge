@@ -1,0 +1,34 @@
+$base-color: red;
+$triangle-base-size: 100px;
+$triangle-side-size: $triangle-base-size / 2;
+
+.triangle-button {
+  width: 0;
+  height: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.triangle-up {
+  border-left: $triangle-side-size solid transparent;
+  border-right: $triangle-side-size solid transparent;
+  border-bottom: $triangle-base-size solid $base-color;
+}
+
+.triangle-down {
+  border-left: $triangle-side-size solid transparent;
+  border-right: $triangle-side-size solid transparent;
+  border-top: $triangle-base-size solid $base-color;
+}
+
+.triangle-right {
+  border-left: $triangle-base-size solid $base-color;
+  border-top: $triangle-side-size solid transparent;
+  border-bottom: $triangle-side-size solid transparent;
+}
+
+.triangle-left {
+  border-top: $triangle-side-size solid transparent;
+  border-right: $triangle-base-size solid $base-color;
+  border-bottom: $triangle-side-size solid transparent;
+}
