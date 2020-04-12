@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Hand from '../components/Hand';
+import Hand from '../components/Hand/Hand';
 import generateHand from '../helper/generateHand';
 
 storiesOf('Hand', module)

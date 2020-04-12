@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Hand from '../Hand';
+import Hand from './Hand';
 import generateHand from '../../helper/generateHand';
 
 const altTextRegex = /\d+ spades|hearts|clubs|diamonds/;

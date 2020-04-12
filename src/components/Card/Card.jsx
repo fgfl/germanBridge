@@ -1,7 +1,7 @@
 import React from 'react';
 
-import '../scss/Card.scss';
-import getCardImage from '../helper/getCardImage';
+import './Card.scss';
+import getCardImage from '../../helper/getCardImage';
 
 export default function Card({ cardData }) {
   return (

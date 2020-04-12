@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Card from './Card';
+import Card from '../Card/Card';
 
 export default function Hand({ cards }) {
   const sortLargestFirst = (a, b) => {

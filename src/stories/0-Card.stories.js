@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Card from '../components/Card';
+import Card from '../components/Card/Card';
 
 storiesOf('Card', module)
   .add('Ace', () => (
