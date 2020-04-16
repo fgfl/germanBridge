@@ -13,7 +13,7 @@ it('renders a default number selector starting at the initial number', () => {
   expect(getByText('0')).toBeInTheDocument();
 });
 
-it('increments the number if the up arrow is pressed', () => {
+it('calls the increment function if the up arrow is pressed', () => {
   const incrementNumber = jest.fn();
   const { getByLabelText } = render(
     <NumberSelector
@@ -30,7 +30,7 @@ it('increments the number if the up arrow is pressed', () => {
   expect(incrementNumber).toHaveBeenCalledTimes(1);
 });
 
-it('decrements the number if the down arrow is pressed', () => {
+it('calls the decrement function if the down arrow is pressed', () => {
   const decrementNumber = jest.fn();
   const { getByLabelText } = render(
     <NumberSelector

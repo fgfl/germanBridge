@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './NumberSelector.scss';
 import TriangleButton from '../TriangleButton/TriangleButton';
