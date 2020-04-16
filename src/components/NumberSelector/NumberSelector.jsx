@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import './NumberSelector.scss';
-
 import TriangleButton from '../TriangleButton/TriangleButton';
 
 export default function NumberSelector({

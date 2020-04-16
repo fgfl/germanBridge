@@ -17,6 +17,7 @@ export default function TriangleButton({
     'triangle-down': down,
     'triangle-left': left,
     'triangle-right': right,
+    disabled: disabled,
   });
 
   const getAriaLabelText = (up, down, left, right) => {
