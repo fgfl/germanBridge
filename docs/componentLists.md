@@ -1,4 +1,4 @@
-- [ ] Bid chooser
+- [x] Bid chooser
 
   - [x] up and down arrows
   - [x] rectangle with number of bids

@@ -1,4 +1,10 @@
+@import '../../styles/variables.scss';
+
 .card {
-  height: 300px;
-  width: 170px;
+  height: $card_height;
+  width: $card_width;
+}
+
+.card-back {
+  background-color: #7fbe63;
 }
