@@ -6,64 +6,42 @@ import NumberSelector from './NumberSelector';
 
 afterEach(cleanup);
 
-it('renders a default number selector starting at the min number', () => {
+it('renders a default number selector starting at the initial number', () => {
   const { getByText } = render(
-    <NumberSelector min={0} max={13}></NumberSelector>
+    <NumberSelector min={0} max={13} number={0}></NumberSelector>
   );
   expect(getByText('0')).toBeInTheDocument();
 });
 
 it('increments the number if the up arrow is pressed', () => {
-  const { getByText, getByLabelText } = render(
-    <NumberSelector min={0} max={13}></NumberSelector>
+  const incrementNumber = jest.fn();
+  const { getByLabelText } = render(
+    <NumberSelector
+      min={0}
+      max={13}
+      number={0}
+      onIncrement={incrementNumber}
+    ></NumberSelector>
   );
   const upButton = getByLabelText('upButton');
 
   fireEvent.click(upButton);
 
-  expect(getByText('1')).toBeInTheDocument();
-});
-
-it('does not increment pass the max number if the up arrow is pressed', () => {
-  const { getByText, getByLabelText } = render(
-    <NumberSelector min={0} max={3}></NumberSelector>
-  );
-  const upButton = getByLabelText('upButton');
-
-  fireEvent.click(upButton);
-  fireEvent.click(upButton);
-  fireEvent.click(upButton);
-  fireEvent.click(upButton);
-
-  expect(getByText('3')).toBeInTheDocument();
+  expect(incrementNumber).toHaveBeenCalledTimes(1);
 });
 
 it('decrements the number if the down arrow is pressed', () => {
-  const { getByText, getByLabelText } = render(
-    <NumberSelector min={0} max={13}></NumberSelector>
+  const decrementNumber = jest.fn();
+  const { getByLabelText } = render(
+    <NumberSelector
+      min={0}
+      max={13}
+      onDecrement={decrementNumber}
+    ></NumberSelector>
   );
-  const upButton = getByLabelText('upButton');
   const downButton = getByLabelText('downButton');
 
-  fireEvent.click(upButton);
-  fireEvent.click(upButton);
   fireEvent.click(downButton);
 
-  expect(getByText('1')).toBeInTheDocument();
-});
-
-it('does not decrement pass the min number if the up arrow is pressed', () => {
-  const { getByText, getByLabelText } = render(
-    <NumberSelector min={1} max={3}></NumberSelector>
-  );
-  const upButton = getByLabelText('upButton');
-  const downButton = getByLabelText('downButton');
-
-  fireEvent.click(upButton);
-  fireEvent.click(upButton);
-  fireEvent.click(downButton);
-  fireEvent.click(downButton);
-  fireEvent.click(downButton);
-
-  expect(getByText('1')).toBeInTheDocument();
+  expect(decrementNumber).toHaveBeenCalledTimes(1);
 });

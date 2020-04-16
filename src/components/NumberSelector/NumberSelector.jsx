@@ -4,29 +4,25 @@ import './NumberSelector.scss';
 
 import TriangleButton from '../TriangleButton/TriangleButton';
 
-export default function NumberSelector({ min, max }) {
-  const [number, setNumber] = useState(min);
-
-  const decrementNumber = () => {
-    setNumber((prev) => prev - 1);
-  };
-
-  const incrementNumber = () => {
-    setNumber((prev) => prev + 1);
-  };
-
+export default function NumberSelector({
+  min,
+  max,
+  number,
+  onIncrement,
+  onDecrement,
+}) {
   return (
     <div className={'number-selector'}>
       <TriangleButton
         down
         disabled={number === min}
-        onClick={decrementNumber}
+        onClick={onDecrement}
       ></TriangleButton>
       <p>{number}</p>
       <TriangleButton
         up
         disabled={number === max}
-        onClick={incrementNumber}
+        onClick={onIncrement}
       ></TriangleButton>
     </div>
   );
