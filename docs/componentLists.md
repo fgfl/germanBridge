@@ -6,12 +6,12 @@
 - [ ] Bid number shower
 - [ ] stack number shower
 
-- [ ] Last stack shower
+- [x] Last stack shower
 
   - flipped down
   - can click to show all player cards
 
-- [ ] Current cards played
+- [x] Current cards played
 
   - matches player position
 

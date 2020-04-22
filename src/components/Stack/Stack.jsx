@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import Card from '../Card/Card';
 import '../Card/Card.scss';
 import './Stack.scss';
 
-export default function Stack({ cards, isFaceUp, flipStack }) {
+export default function Stack({ cards, isFaceUp, isPreviousStack, flipStack }) {
   const faceDownClass = classNames('card', {
     'card-back': !isFaceUp,
   });
@@ -41,7 +41,7 @@ export default function Stack({ cards, isFaceUp, flipStack }) {
   ];
 
   return (
-    <div className={stackClass} onClick={flipStack}>
+    <div className={stackClass} onClick={(e) => isPreviousStack && flipStack()}>
       {isFaceUp && faceUpCards}
       {!isFaceUp && <div className={faceDownClass}></div>}
     </div>

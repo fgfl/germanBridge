@@ -19,6 +19,7 @@ storiesOf('Stack', module)
     <Stack
       cards={{}}
       isFaceUp={false}
+      isPreviousStack
       flipStack={action('flipping_stack')}
     ></Stack>
   ))
@@ -26,6 +27,15 @@ storiesOf('Stack', module)
     <Stack
       cards={cards}
       isFaceUp={true}
+      isPreviousStack
       flipStack={action('flipping_stack')}
+    ></Stack>
+  ))
+  .add('Not Previous stack. Not clickable', () => (
+    <Stack
+      cards={cards}
+      isFaceUp
+      isPreviousStack={false}
+      flipStack={action(`I shouldn't be called`)}
     ></Stack>
   ));
