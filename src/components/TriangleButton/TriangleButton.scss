@@ -32,3 +32,7 @@ $triangle-side-size: $triangle-base-size / 2;
   border-right: $triangle-base-size solid $base-color;
   border-bottom: $triangle-side-size solid transparent;
 }
+
+.disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.stack-container {
+  display: grid;
+  grid:
+    [row1-start] 'left top right' 1fr [row1-end]
+    [row2-start] 'left bottom right' 1fr [row2-end]
+    / $card_width $card_width $card_width;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.side-cards {
+  align-self: center;
+}
+
+.left-card {
+  @extend .side-cards;
+  grid-area: left;
+}
+.right-card {
+  @extend .side-cards;
+  grid-area: right;
+}
+.top-card {
+  grid-area: top;
+}
+
+.bottom-card {
+  grid-area: bottom;
+}

@@ -1,17 +1,17 @@
-- [ ] Bid chooser
+- [x] Bid chooser
 
   - [x] up and down arrows
   - [x] rectangle with number of bids
 
-- [ ] Bid number shower
-- [ ] stack number shower
+- [x] Bid number shower
+- [x] stack number shower
 
-- [ ] Last stack shower
+- [x] Last stack shower
 
   - flipped down
   - can click to show all player cards
 
-- [ ] Current cards played
+- [x] Current cards played
 
   - matches player position
 
