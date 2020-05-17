@@ -3,8 +3,8 @@
   - [x] up and down arrows
   - [x] rectangle with number of bids
 
-- [ ] Bid number shower
-- [ ] stack number shower
+- [x] Bid number shower
+- [x] stack number shower
 
 - [x] Last stack shower
 
