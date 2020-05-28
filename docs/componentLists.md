@@ -15,10 +15,10 @@
 
   - matches player position
 
-- [ ] Username form
+- [x] Username form
 
   - input field for name
-  - save button
+  - [ ]save button (add sending function)
 
 - [ ] Game lobby card
 
