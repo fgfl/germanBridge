@@ -25,6 +25,8 @@
   - lobby title
   - number of players out of total players
   - only shown if not full
+  - show lock if password protected
+  - join button
 
 - [ ] new lobby button
 
