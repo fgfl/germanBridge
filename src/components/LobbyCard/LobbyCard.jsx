@@ -16,7 +16,7 @@ export default function LobbyCard({
   return (
     <div className={lobbyCardClass}>
       <h2>{lobbyTitle}</h2>
-      {passwordRequired && <p>P/W requred</p>}
+      {passwordRequired && <p>P/W required</p>}
       <ValueShower value={`${totalPlayers}/${lobbySize}`}>Players</ValueShower>
       <button onClick={onClickJoin}>Join</button>
     </div>
